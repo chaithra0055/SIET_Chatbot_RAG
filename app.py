@@ -4,7 +4,7 @@ st.set_page_config(page_title="SIET_Chatbot", layout="centered")
 
 st.title("Shridevi Institute of Engineering and Technology - ChatBot")
 st.caption("Ask anything about college information...")
-st.caption("Created by Bhavana S O")
+st.caption("Created by Aishwarya S M")
 
 mykey = st.secrets["GROQ_API_KEY"]
 
@@ -43,4 +43,4 @@ if question:
 
 if st.button("Clear chat"):
     st.session_state.chat_hist = []
-    st.rerun()
+    st.rerun()  
