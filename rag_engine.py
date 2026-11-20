@@ -1,12 +1,12 @@
 import faiss
 import numpy as np
 from groq import Groq
-import pypdf import PDFReader
+import pypdf import pdfReader
 from sentence_transformers import SentenceTransformer
 
 #load pdfs
 def load_pdf (pdf_path):
-reader = PDFReader(str(path_path))
+reader = pdfReader(str(path_path))
 mypages = [i.extract_text() or "" for i in reader.pages]
 full_text= "\n",join(mypages).strip()
 if not full_text:
@@ -38,8 +38,8 @@ def build_vectors (chunks,model_name="all-MiniLM-L6-v2"):
 def load_base (pdf_path= "01_College_Information.pdf"):
   full_text = load_pdf(pdf_path)
   chunks = create_chunks(full_text)
-  embed_model,index = build_vector(chunks)
-  return embed_model,chunks,index
+  index,model = build_vector(chunks)
+  return ,index,chunks,embed_model
 
 #retrieve
 def retrieve_content (question,embed_model,chunks,index,num_chunks=3):
