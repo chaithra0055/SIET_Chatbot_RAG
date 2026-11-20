@@ -34,7 +34,7 @@ with st.chat_message("assistant"):
                       index,api_key = mykey)
     
     st.write(answer)
-     st.session_state.chat_hist.append(
+    st.session_state.chat_hist.append(
     {"role" :"assistant", "content" : answer})
     
 if st.button("Clear chat"):
