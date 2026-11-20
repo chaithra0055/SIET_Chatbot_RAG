@@ -1,6 +1,6 @@
 streamlit
 pypdf
-sentance_transformers
+sentence-transformers
 faiss-cpu
 groq
 numpy
